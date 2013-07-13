@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://careers.softonic.com/precise32.box"
 
+  # This will allow acessing port 80 on the guest via port 8080 on the host.
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
   config.vm.provision :puppet do |puppet|
